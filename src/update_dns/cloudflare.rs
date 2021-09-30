@@ -80,7 +80,7 @@ impl UpdateDns for Cloudflare {
 
         if record.content == new_ip.to_string() {
             info!("[cloudflare] New IP is the same as existing, skipping update.");
-            //return Ok(());
+            return Ok(());
         }
 
         info!("[cloudflare] Old content was {}", record.content);
